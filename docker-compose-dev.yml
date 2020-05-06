@@ -37,6 +37,6 @@ services:
     build: ./services/nginx
     restart: always
     ports:
-      - "80"
+      - 8081:80
     depends_on:
       - users
