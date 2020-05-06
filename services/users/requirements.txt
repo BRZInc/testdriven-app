@@ -1,7 +1,9 @@
 alembic==1.4.2
 awscli==1.18.51
+bcrypt==3.1.7
 blinker==1.4
 botocore==1.16.1
+cffi==1.14.0
 click==7.1.2
 colorama==0.4.3
 coverage==5.1
@@ -9,6 +11,7 @@ docutils==0.15.2
 entrypoints==0.3
 flake8==3.7.9
 Flask==1.1.2
+Flask-Bcrypt==0.7.1
 Flask-Cors==3.0.8
 Flask-DebugToolbar==0.11.0
 Flask-Migrate==2.5.3
@@ -24,6 +27,7 @@ mccabe==0.6.1
 psycopg2==2.8.5
 pyasn1==0.4.8
 pycodestyle==2.5.0
+pycparser==2.20
 pyflakes==2.1.1
 python-dateutil==2.8.1
 python-editor==1.0.4
