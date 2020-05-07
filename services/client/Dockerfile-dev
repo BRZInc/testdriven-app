@@ -1,8 +1,8 @@
 # base image
-FROM node:10.19
+FROM node:13.12-alpine
 
 # set working directory
-RUN mkdir /usr/src/app
+# RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
 # add `/usr/src/app/node_modules/.bin` to $PATH
@@ -12,6 +12,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY package.json /usr/src/app/package.json
 RUN npm install --silent
 RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install react-router --silent
 
 # start app
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
