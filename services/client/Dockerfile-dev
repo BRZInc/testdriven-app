@@ -8,11 +8,18 @@ WORKDIR /usr/src/app
 # add `/usr/src/app/node_modules/.bin` to $PATH
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
+ARG REACT_APP_USERS_SERVICE_URL
+ARG NODE_ENV
+ENV NODE_ENV $NODE_ENV
+ENV REACT_APP_USERS_SERVICE_URL $REACT_APP_USERS_SERVICE_URL
+
 # install and cache app dependencies
 COPY package.json /usr/src/app/package.json
 RUN npm install --silent
 RUN npm install react-scripts@3.4.1 -g --silent
 RUN npm install react-router --silent
+
+COPY . /usr/src/app
 
 # start app
 CMD ["npm", "start"]
