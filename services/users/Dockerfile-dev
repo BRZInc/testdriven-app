@@ -6,7 +6,7 @@ RUN apt-get update -yqq \
         netcat \
     && apt-get -q clean
 
-ENV REACT_APP_USERS_SERVICE_URL $REACT_APP_USERS_SERVICE_URL
+# ENV REACT_APP_USERS_SERVICE_URL $REACT_APP_USERS_SERVICE_URL
 
 # set working directory
 RUN mkdir -p /usr/src/app
