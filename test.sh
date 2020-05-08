@@ -30,6 +30,11 @@ inspect $? users-lint
 if [[ "${env}" == "dev" ]]; then
   docker-compose -f $file run client npm test -- --coverage
   inspect $? client
+  yarn testcafe chrome e2e
+  inspect $? e2e
+else
+  yarn testcafe chrome e2e/index.test.js
+  inspect $? e2e
 fi
 
 if [ -n "${fails}" ]; then
